@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function BackToTop({ threshold = 200 }: { threshold?: number }) {
   const [visible, setVisible] = useState(false);
@@ -21,15 +23,33 @@ export default function BackToTop({ threshold = 200 }: { threshold?: number }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const phoneTarget = "6287837970070";
+  const waMessage = "hallo admin Paskal Rental, mau bertanya perihal sewa motor";
+  const waUrl = `https://wa.me/${phoneTarget}?text=${encodeURIComponent(waMessage)}`;
+
   return (
-    <button
-      aria-label="Kembali ke atas"
-      onClick={scrollTop}
-      className={`fixed z-50 bottom-5 right-5 md:bottom-7 md:right-7 inline-flex items-center justify-center w-12 h-12 rounded-full text-white shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/40 bg-rent hover:bg-[#a06663] cursor-pointer ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-      }`}
-    >
-      <ChevronUpIcon className="w-6 h-6" strokeWidth={2.5} />
-    </button>
+    <div
+      className={`fixed z-50 bottom-5 right-5 md:bottom-7 md:right-7 flex flex-col items-center gap-3 transition-all duration-300 ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-4 pointer-events-none"
+      }`}>
+      <a
+        href={waUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hubungi via WhatsApp"
+        className="inline-flex items-center justify-center w-12 h-12 rounded-full text-white shadow-lg bg-[#25D366] hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-white/40"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} className="w-7 h-7" />
+      </a>
+      <button
+        aria-label="Kembali ke atas"
+        onClick={scrollTop}
+        className="inline-flex items-center justify-center w-12 h-12 rounded-full text-white shadow-lg bg-rent hover:bg-[#a06663] cursor-pointer"
+      >
+        <ChevronUpIcon className="w-6 h-6" strokeWidth={2.5} />
+      </button>
+    </div>
   );
 }

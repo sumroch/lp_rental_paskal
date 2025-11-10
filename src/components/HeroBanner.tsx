@@ -28,16 +28,14 @@ export default function HeroBanner() {
             Jasa Sewa Rental Sepeda Motor di Kota Bandung,Harian,Mingguan,Bulanan dengan Harga Murah & Berkualitas 
             </p>
             <Stagger className="mt-4 md:mt-6 flex gap-3">
-              <Button 
+              <Button
                 as="a"
-                href="#contact"
-                color="primary" 
-                radius="sm" 
+                href={`https://wa.me/6287837970070?text=${encodeURIComponent("hallo admin paskal rental saya mau sewa motor")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                color="primary"
+                radius="sm"
                 className="font-semibold px-5 bg-rent text-white rounded-lg p-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
               >
                 Sewa Sekarang
               </Button>

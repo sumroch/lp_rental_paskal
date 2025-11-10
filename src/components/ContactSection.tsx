@@ -332,7 +332,7 @@ export default function ContactSection({ id = "contact" }: { id?: string }) {
                     variant="bordered"
                     size="md"
                     label="Nama"
-                    placeholder="Nama penjamin"
+                    placeholder="Nama"
                     value={form.penjamin}
                     onValueChange={onChange("penjamin")}
                   />

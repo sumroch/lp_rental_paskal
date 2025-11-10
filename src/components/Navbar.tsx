@@ -14,7 +14,7 @@ const links = [
   { href: "#steps", label: "Cara Sewa" },
   { href: "#faq", label: "FAQ" },
   { href: "#reviews", label: "Reviews" },
-  { href: "#contact", label: "Kontak" },
+  { href: "#contact", label: "Booking" },
   { href: "#blog", label: "Artikel" },
 ];
 

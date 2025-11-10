@@ -47,7 +47,7 @@ function Section({ cc, items }: { cc: string; items: Product[] }) {
 
   const orderWA = (p: Product) => {
     const lines = [
-      "Hallo Admin saya mau rental motor",
+      "Hallo Admin Paskal Rental saya mau rental motor",
       "",
       `nama motor : ${p.name}`,
       "",
@@ -116,11 +116,7 @@ function Section({ cc, items }: { cc: string; items: Product[] }) {
                         color="primary"
                         radius="sm"
                         isDisabled={isUnavailable}
-                        // onPress={() => orderWA(p)}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
+                        onClick={() => orderWA(p)}
                       >
                         Sewa
                       </Button>
