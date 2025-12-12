@@ -1,40 +1,13 @@
 import { Card } from "@heroui/react";
-import {
-  PhoneIcon,
-  CalendarDaysIcon,
-  CreditCardIcon,
-  BuildingOfficeIcon,
-} from "@heroicons/react/24/solid";
-import { Reveal, Stagger } from "@/components/Reveal";
-
-const steps = [
-  {
-    id: 1,
-    icon: PhoneIcon,
-    title: "Hubungi Kami",
-    desc: "Chat WhatsApp untuk ketersediaan & harga.",
-  },
-  {
-    id: 2,
-    icon: CalendarDaysIcon,
-    title: "Reservasi",
-    desc: "Kirim data diri & pilih jadwal sewa.",
-  },
-  {
-    id: 3,
-    icon: CreditCardIcon,
-    title: "Pembayaran",
-    desc: "Transfer DP atau bayar penuh sesuai kebutuhan.",
-  },
-  {
-    id: 4,
-    icon: BuildingOfficeIcon,
-    title: "Ambil / Antar",
-    desc: "Unit bisa diambil atau kami antar ke lokasi.",
-  },
-];
+import { Reveal } from "@/components/Reveal";
 
 export default function Steps({ id = "steps" }: { id?: string }) {
+  const images = [
+    { src: "/icon/1.png", alt: "Step 1" },
+    { src: "/icon/2.png", alt: "Step 2" },
+    { src: "/icon/3.png", alt: "Step 3" },
+    { src: "/icon/4.png", alt: "Step 4" },
+  ];
   return (
     <section
       id={id}
@@ -45,24 +18,15 @@ export default function Steps({ id = "steps" }: { id?: string }) {
           Cara Sewa
         </h2>
       </Reveal>
-
-      <div className="relative flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10 max-w-4xl mx-auto">
-        {steps.map(({ id, icon: Icon, title, desc }) => (
-          <Reveal key={id}>
-            <div className="relative flex items-center md:items-start gap-4">
-              {/* Card utama */}
-              <Card className="flex-1 p-5 md:p-6 shadow-md rounded-xl">
-                <div className="flex items-center gap-4">
-                  <Icon className="w-10 h-10 text-[#0e5fd8] shrink-0" />
-                  <div>
-                    <p className="font-semibold text-base md:text-lg">
-                      {title}
-                    </p>
-                    <p className="text-sm text-foreground/70">{desc}</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
+      <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto md:gap-10">
+        {images.map((img) => (
+          <Reveal key={img.src}>
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-auto object-contain rounded-xl shadow-md"
+              loading="lazy"
+            />
           </Reveal>
         ))}
       </div>
