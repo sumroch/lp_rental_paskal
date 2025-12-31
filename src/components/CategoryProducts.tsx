@@ -29,7 +29,7 @@ const data: Record<string, Product[]> = {
   "150": [
     { name: "Vario LED 150 Old", price: 150000, img: "/motorcycle/150cc/varioLed.svg?v=20251007" },
     { name: "PCX", price: 200000, img: "/motorcycle/150cc/pcx.svg?v=20251007" },
-    { name: "Vario 150 New", price: 175000, img: "/motorcycle/150cc/vario.svg?v=20251007" },
+    { name: "Vario 150 New", price: 165000, img: "/motorcycle/150cc/vario.svg?v=20251007" },
   ],
   "160": [
     { name: "Vario 160 New", price: 200000, img: "/motorcycle/160cc/vario.svg?v=20251007" },

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@heroui/react";
+import SyaratKetentuanModal from "@/components/SyaratKetentuanModal";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
@@ -45,6 +46,7 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [sectionIds]);
 
+  const [modalOpen, setModalOpen] = useState(false);
   const renderLinks = (onClick?: () => void) => (
     <ul className="flex items-center gap-6 text-sm">
       {links.map((l) => (
@@ -58,6 +60,15 @@ export default function Navbar() {
           </a>
         </li>
       ))}
+      <li>
+        <button
+          type="button"
+          className="font-medium transition-colors text-foreground/80 hover:text-[#0e5fd8]"
+          onClick={() => { setModalOpen(true); onClick?.(); }}
+        >
+          Syarat & Ketentuan
+        </button>
+      </li>
     </ul>
   );
 
@@ -71,6 +82,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           {renderLinks()}
         </div>
+        <SyaratKetentuanModal open={modalOpen} onClose={() => setModalOpen(false)} />
         <button aria-label="Open menu" className="md:hidden p-2" onClick={() => setOpen((v) => !v)}>
           {open ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
         </button>
@@ -99,6 +111,15 @@ export default function Navbar() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <button
+                    type="button"
+                    className="block font-medium text-white/90 text-left w-full"
+                    onClick={() => { setModalOpen(true); setOpen(false); }}
+                  >
+                    Syarat & Ketentuan
+                  </button>
+                </li>
               </ul>
             </div>
           </div>

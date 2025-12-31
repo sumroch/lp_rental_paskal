@@ -20,6 +20,8 @@
     "@heroui/system": "^2.4.22",
     "@heroui/theme": "^2.4.22",
     "framer-motion": "^12.23.22",
+    "jspdf": "^3.0.4",
+    "jspdf-autotable": "^5.0.2",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",

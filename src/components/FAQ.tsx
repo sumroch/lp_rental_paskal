@@ -23,40 +23,21 @@ export default function FAQ({ id = "faq" }: { id?: string }) {
       a: "Bisa. Kami melayani antar jemput ke hotel dan stasiun dengan radius maksimal 5 km dari Paskal Rental. Jika lebih dari 5 km akan dikenakan charge Rp10.000/km.",
     },
     {
-      q: "Apa yang didapat selama rental motor?",
-      a: `
-• Free 2 jas hujan<br />
-• 2 helm<br />
-• Phone holder<br />
-• Kunci ganda<br />
-• Lap kanebo
-      `,
-    },
-    {
-      q: "Apakah ada harga khusus untuk mahasiswa?",
-      a: "Ada. Harga khusus untuk mahasiswa aktif dengan memperlihatkan KTM yang masih berlaku.",
-    },
-    {
-      q: "Apakah bisa rental tapi tidak mempunyai SIM?",
-      a: "Tidak bisa, untuk menghindari pelanggaran lalu lintas (tilang).",
-    },
-    {
-      q: "Bagaimana jika ada tilang?",
-      a: "Customer diharapkan mematuhi segala aturan lalu lintas. Jika terjadi tilang, menjadi tanggung jawab customer.",
-    },
-    {
       q: "Bisakah rental motor untuk 12 jam?",
       a: "Bisa, namun hanya berlaku pada weekdays.",
     },
     {
       q: "Metode pembayaran apa saja yang tersedia?",
-      a: "Transfer bank dan tunai saat serah terima.",
+      a: "Transfer bank, Qris dan tunai saat serah terima.",
     },
     {
-      q: "Bagaimana proses jika ingin membatalkan booking?",
+      q: "Bagaimana ketentuan pembatalan booking ??",
       a: `
-• Pembatalan dilakukan minimal 1 hari sebelum hari-H agar DP dikembalikan full.<br />
-• Jika dilakukan saat hari-H, maka DP hangus.
+        Pembatalan seluruh atau sebagian pemesanan akan dikenakan biaya pembatalan sebagaimana dijelaskan di bawah ini: <br />
+        •  7 hari sebelum tanggal sewa dikenakan potongan 0% dari tarif dan biaya yang ditentukan <br />
+        •  3 hari sebelum tanggal sewa dikenakan potongan 30% dari tarif dan biaya yang ditentukan <br />
+        •  1 hari sebelum tanggal sewa dikenakan potongan 50% dari tarif dan biaya yang ditentukan <br />
+        •  0 hari sebelum tanggal sewa dikenakan potongan 100% dari tarif dan biaya yang ditentukan
       `,
     },
     {
@@ -81,10 +62,6 @@ export default function FAQ({ id = "faq" }: { id?: string }) {
     {
       q: "Bagaimana jika ada kehilangan?",
       a: "Kehilangan unit atau perlengkapan seperti helm menjadi tanggung jawab customer.",
-    },
-    {
-      q: "Bisakah booking rental di hari H?",
-      a: "Bisa, selama masih ada unit yang tersedia.",
     },
   ];
 
